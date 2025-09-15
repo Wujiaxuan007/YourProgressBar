@@ -14,9 +14,10 @@ import javax.swing.UIManager
  * @author wjx
  */
 class ProgressBarListener : LafManagerListener, DynamicPluginListener, ApplicationActivationListener {
-    private lateinit var pluginId: PluginId
+    private var pluginId: PluginId
     init {
         updateProgressBarUI()
+        pluginId = PluginId.getId("pers.wjx.plugin.yourProgressBar")
     }
 
     override fun lookAndFeelChanged(lafManager: LafManager) {
